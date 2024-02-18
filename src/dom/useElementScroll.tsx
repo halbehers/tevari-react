@@ -12,6 +12,13 @@ interface ISElementScrollInfo {
   elementScrollRelativeLeft: number;
 }
 
+/**
+ * This hook gives all necessary information about scroll position of the element corresponding to the given id.
+ * It automatically reloads on every scroll or resize events from the client window.
+ * 
+ * @param id The id of the concerned element.
+ * @returns The scroll information.
+ */
 export const useElementScroll = (id?: string): ISElementScrollInfo => {
   const { element } = useElementByID(id);
   const [top, setTop] = useState(0);

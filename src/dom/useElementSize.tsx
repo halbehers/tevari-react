@@ -14,6 +14,14 @@ interface IElementSizeOptions {
   type?: ElementSizeType;
 }
 
+/**
+ * This hook gives the width and height size of the element corresponding to the given id.
+ * It automatically reloads on every resize events from the client window.
+ * 
+ * @param id The id of the concerned element.
+ * @param options Here you can specify the type of width and height to retrieve (`{ type: "offset" | "scroll" | "client" }`).
+ * @returns The width and height.
+ */
 export const useElementSize = (id?: string, options?: IElementSizeOptions): ISElementSizeInfo => {
   const { type = "offset" } = options ?? {};
   const { element } = useElementByID(id);

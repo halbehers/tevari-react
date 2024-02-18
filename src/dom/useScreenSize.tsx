@@ -7,6 +7,12 @@ interface IScreenSizeInfo {
   screenHeight: number;
 }
 
+/**
+ * This hook gives the width and height size of the screen.
+ * It automatically reloads on every resize events from the client window.
+ * 
+ * @returns The width and height.
+ */
 export const useScreenSize = (): IScreenSizeInfo => {
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);

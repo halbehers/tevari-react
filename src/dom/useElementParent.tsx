@@ -8,6 +8,12 @@ interface IElementParentInfo {
   elementParentNode?: ParentNode;
 }
 
+/**
+ * Extract from the DOM the parent of the `HTMLElement` corresponding to the given id. This hook does nothing if the given id is undefined.
+ * 
+ * @param id The id of the element to extract its parent from.
+ * @returns The corresponding `HTMLElement` and `ParentNode` if they exists.
+ */
 export const useElementParent = (id?: string): IElementParentInfo => {
   const { element } = useElementByID(id);
   const [parent, setParent] = useState<HTMLElement | undefined>();
