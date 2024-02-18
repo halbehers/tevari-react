@@ -1,6 +1,6 @@
 {
   "name": "tevari-react",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "(NPM Package) Collection of various small hooks helpers for react projects",
   "main": "dist/index.js",
   "files": [
