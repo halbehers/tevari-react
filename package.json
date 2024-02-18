@@ -1,0 +1,43 @@
+{
+  "name": "tevari-react",
+  "version": "0.2.0",
+  "description": "(NPM Package) Collection of various small hooks helpers for react projects",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup index.ts --format cjs,esm --dts",
+    "lint": "tsc",
+    "preversion": "yarn build",
+    "version": "npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/halbehers/tevari-react"
+  },
+  "keywords": [
+    "helpers",
+    "typescript",
+    "hooks",
+    "dom"
+  ],
+  "author": "Sebastien Halbeher",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.56",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}
